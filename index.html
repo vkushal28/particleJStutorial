@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="jquery-2.1.4.js"></script>
+    <script src="particles.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div id="navbar"><span>Particles.js</span></div>
+<div id="wrapper">
+    <div id="particle-div"></div>
+    <button id="particle-button">Start</button>
+    <button id="update-button">Update</button>
+</div>
+
+<script>
+    $("#particle-button").click(function(){
+        particlesJS.load('particle-div','particle-cfg.json');
+    });
+    $("#update-button").click(function(){
+        window.pJSDom[0].pJS.particles.number.value = 200;
+        window.pJSDom[0].pJS.particles.color.value = "#dccaff";
+        window.pJSDom[0].pJS.tmp.obj.size_value = 80;
+        window.pJSDom[0].pJS.fn.particlesRefresh();
+    });
+</script>
+</body>
+</html>
